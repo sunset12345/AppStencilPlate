@@ -3,7 +3,7 @@ using System.Text;
 using UnityEngine.Scripting;
 using LitJson;
 
-namespace YYDev.AssetBundles
+namespace DFDev.AssetBundles
 {
     [Preserve]
     public class VersionConfig

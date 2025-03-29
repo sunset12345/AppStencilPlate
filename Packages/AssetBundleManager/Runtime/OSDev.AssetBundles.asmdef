@@ -1,9 +1,9 @@
 {
-    "name": "YYDev.AssetBundles",
+    "name": "DFDev.AssetBundles",
     "rootNamespace": "",
     "references": [
         "LitJson",
-        "YYDev.Singleton"
+        "DFDev.Singleton"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

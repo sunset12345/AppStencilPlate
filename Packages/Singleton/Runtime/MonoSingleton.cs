@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace YYDev.Singleton
+namespace DFDev.Singleton
 {
     public abstract class MonoSingleton<T>
         : MonoBehaviour

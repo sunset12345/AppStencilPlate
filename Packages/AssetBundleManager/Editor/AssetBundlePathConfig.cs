@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-namespace YYDev.AssetBundles.Editor
+namespace DFDev.AssetBundles.Editor
 {
     public class AssetBundlePathConfig : ScriptableObject
     {

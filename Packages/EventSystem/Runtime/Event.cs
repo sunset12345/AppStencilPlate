@@ -1,7 +1,7 @@
 using System;
 using System.Diagnostics;
 
-namespace YYDev.EventSystem
+namespace DFDev.EventSystem
 {
     public interface IEvent
     {

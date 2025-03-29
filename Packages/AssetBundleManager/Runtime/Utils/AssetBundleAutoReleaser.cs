@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace YYDev.AssetBundles
+namespace DFDev.AssetBundles
 {
     public class AssetBundleAutoReleaser : MonoBehaviour
     {

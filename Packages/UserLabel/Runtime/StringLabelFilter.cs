@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace YYDev.UserLabel
+namespace DFDev.UserLabel
 {
     public class StringLabelFilter : UserLabelFilter<string>
     {

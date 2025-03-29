@@ -8,7 +8,7 @@ using UnityEngine.Scripting;
 using UnityEditor;
 #endif
 
-namespace YYDev.AssetBundles
+namespace DFDev.AssetBundles
 {
     [Preserve]
     public class BundleInfo

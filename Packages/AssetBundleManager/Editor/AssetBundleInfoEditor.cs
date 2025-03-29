@@ -3,7 +3,7 @@ using UnityEditor;
 using System.Collections;
 using System.IO;
 
-namespace YYDev.AssetBundles.Editor
+namespace DFDev.AssetBundles.Editor
 {
     [CustomEditor(typeof(BundleInfoInspectorItem))]
     internal class AssetBundleInfoEditor : UnityEditor.Editor

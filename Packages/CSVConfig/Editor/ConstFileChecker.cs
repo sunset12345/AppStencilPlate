@@ -4,7 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 
-namespace YYDev.CSVConfig.Editor
+namespace DFDev.CSVConfig.Editor
 {
     internal class ConstRowData
     {
@@ -132,7 +132,7 @@ using System.Text;");
             // Start of class
             content.Append(@"
 
-public class ").Append($"{className} : YYDev.CSVConfig.ConfigBase").Append(@"
+public class ").Append($"{className} : DFDev.CSVConfig.ConfigBase").Append(@"
 {");
             foreach (var rawData in sortedData)
             {

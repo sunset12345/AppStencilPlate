@@ -1,4 +1,4 @@
-﻿namespace YYDev.CSVConfig.Editor
+﻿namespace DFDev.CSVConfig.Editor
 {
     public interface IHandler
     {

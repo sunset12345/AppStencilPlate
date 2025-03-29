@@ -2,7 +2,7 @@ using System.IO;
 using UnityEngine;
 using UnityEditor;
 
-namespace YYDev.AssetBundles.Editor
+namespace DFDev.AssetBundles.Editor
 {
     public static class EditorHelper
     {

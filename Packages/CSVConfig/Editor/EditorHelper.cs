@@ -6,7 +6,7 @@ using System.Text;
 using UnityEditor;
 using UnityEngine;
 
-namespace YYDev.CSVConfig.Editor
+namespace DFDev.CSVConfig.Editor
 {
     public static class EditorHelper
     {

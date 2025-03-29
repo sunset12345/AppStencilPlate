@@ -2,7 +2,7 @@
 using UnityEditorInternal;
 using UnityEngine;
 
-namespace YYDev.AssetBundles.Editor
+namespace DFDev.AssetBundles.Editor
 {
     public class AssetBundlePathEditor : EditorWindow
     {

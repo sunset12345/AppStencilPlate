@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEditor;
 using UnityEditor.IMGUI.Controls;
 
-namespace YYDev.AssetBundles.Editor
+namespace DFDev.AssetBundles.Editor
 {
     public class AssetBundleAnalysisWindow : EditorWindow
     {

@@ -1,8 +1,8 @@
 {
-    "name": "YYDev.UserLabel.Sample",
+    "name": "DFDev.UserLabel.Sample",
     "rootNamespace": "",
     "references": [
-        "YYDev.UserLabel"
+        "DFDev.UserLabel"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

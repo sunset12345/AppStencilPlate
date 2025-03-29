@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace YYDev.UserLabel
+namespace DFDev.UserLabel
 {
     public interface IUserLabelFilter
     {

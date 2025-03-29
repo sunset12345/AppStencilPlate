@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace YYDev.EventSystem
+namespace DFDev.EventSystem
 {
     public class EventSubscriber : IDisposable
     {

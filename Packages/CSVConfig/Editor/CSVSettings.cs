@@ -4,7 +4,7 @@ using System.IO;
 using UnityEditor;
 using UnityEngine;
 
-namespace YYDev.CSVConfig.Editor
+namespace DFDev.CSVConfig.Editor
 {
     [Serializable]
     public class CSVSettings : ScriptableObject

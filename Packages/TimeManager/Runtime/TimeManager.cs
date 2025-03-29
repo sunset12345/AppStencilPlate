@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
-namespace YYDev.Time
+namespace DFDev.Time
 {
     public static class TimeManager
     {

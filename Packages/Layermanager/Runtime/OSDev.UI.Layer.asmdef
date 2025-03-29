@@ -1,8 +1,8 @@
 {
-    "name": "YYDev.UI.Layer",
+    "name": "DFDev.UI.Layer",
     "rootNamespace": "",
     "references": [
-        "YYDev.Singleton"
+        "DFDev.Singleton"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

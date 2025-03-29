@@ -9,7 +9,7 @@ using System.Text;
 using Xxtea;
 using LitJson;
 
-namespace YYDev.AssetBundles.Editor
+namespace DFDev.AssetBundles.Editor
 {
     public enum TargetPlatform
     {

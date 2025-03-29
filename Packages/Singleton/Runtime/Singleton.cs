@@ -1,6 +1,6 @@
 using System;
 
-namespace YYDev.Singleton
+namespace DFDev.Singleton
 {
     public class Singleton<T> where T : Singleton<T>, new()
     {

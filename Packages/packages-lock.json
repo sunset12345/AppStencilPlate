@@ -212,66 +212,6 @@
         "com.unity.modules.imgui": "1.0.0"
       }
     },
-    "com.yydev.abmanager": {
-      "version": "file:AssetBundleManager",
-      "depth": 0,
-      "source": "embedded",
-      "dependencies": {
-        "com.yydev.singleton": "1.0.0",
-        "com.yydev.litjson": "1.0.0"
-      }
-    },
-    "com.yydev.csvconfig": {
-      "version": "file:CSVConfig",
-      "depth": 0,
-      "source": "embedded",
-      "dependencies": {}
-    },
-    "com.yydev.eventsystem": {
-      "version": "file:EventSystem",
-      "depth": 0,
-      "source": "embedded",
-      "dependencies": {}
-    },
-    "com.yydev.json-config": {
-      "version": "file:JsonConfig",
-      "depth": 0,
-      "source": "embedded",
-      "dependencies": {}
-    },
-    "com.yydev.layermanager": {
-      "version": "file:Layermanager",
-      "depth": 0,
-      "source": "embedded",
-      "dependencies": {
-        "com.unity.ugui": "1.0.0",
-        "com.yydev.singleton": "1.0.0"
-      }
-    },
-    "com.yydev.litjson": {
-      "version": "file:Litjson",
-      "depth": 0,
-      "source": "embedded",
-      "dependencies": {}
-    },
-    "com.yydev.singleton": {
-      "version": "file:Singleton",
-      "depth": 0,
-      "source": "embedded",
-      "dependencies": {}
-    },
-    "com.yydev.timemanager": {
-      "version": "file:TimeManager",
-      "depth": 0,
-      "source": "embedded",
-      "dependencies": {}
-    },
-    "com.yydev.userlabel": {
-      "version": "file:UserLabel",
-      "depth": 0,
-      "source": "embedded",
-      "dependencies": {}
-    },
     "com.unity.modules.ai": {
       "version": "1.0.0",
       "depth": 1,

@@ -1,10 +1,10 @@
 {
-    "name": "YYDev.UserLabel.EditorTests",
+    "name": "DFDev.UserLabel.EditorTests",
     "rootNamespace": "",
     "references": [
         "UnityEngine.TestRunner",
         "UnityEditor.TestRunner",
-        "YYDev.UserLabel"
+        "DFDev.UserLabel"
     ],
     "includePlatforms": [
         "Editor"

@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace YYDev.AssetBundles
+namespace DFDev.AssetBundles
 {
     [RequireComponent(typeof(Image))]
     public class SpriteLoader : MonoBehaviour

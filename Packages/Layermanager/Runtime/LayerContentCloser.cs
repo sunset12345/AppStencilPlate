@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace YYDev.UI.Layer
+namespace DFDev.UI.Layer
 {
     [RequireComponent(typeof(Button))]
     public class LayerContentCloser : MonoBehaviour

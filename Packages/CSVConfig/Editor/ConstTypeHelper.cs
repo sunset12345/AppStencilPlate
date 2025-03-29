@@ -2,7 +2,7 @@ using System;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace YYDev.CSVConfig.Editor
+namespace DFDev.CSVConfig.Editor
 {
     internal abstract class ConstTypeHelper
     {

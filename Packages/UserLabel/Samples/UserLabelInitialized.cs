@@ -2,7 +2,7 @@
 // using System.Linq;
 // using System.Reflection;
 //
-// namespace YYDev.UserLabel.Sample
+// namespace DFDev.UserLabel.Sample
 // {
 //     public static class UserLabelInitialized
 //     {

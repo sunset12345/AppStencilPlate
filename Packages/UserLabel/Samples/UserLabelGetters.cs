@@ -3,7 +3,7 @@ using System.Globalization;
 using System.Reflection;
 using UnityEngine;
 
-namespace YYDev.UserLabel.Sample
+namespace DFDev.UserLabel.Sample
 {
     public static class UserLabelGetters
     {

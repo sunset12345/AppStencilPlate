@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace YYDev.AssetBundles.Editor
+namespace DFDev.AssetBundles.Editor
 {
     [AttributeUsage(AttributeTargets.Method, AllowMultiple = true)]
     public sealed class AssetBundleVersionGetter : Attribute

@@ -7,7 +7,7 @@ using System.IO;
 using System.Linq;
 using UnityEngine.Networking;
 
-namespace YYDev.AssetBundles
+namespace DFDev.AssetBundles
 {
     public partial class AssetBundleManager
     {

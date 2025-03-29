@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
-using YYDev.Singleton;
+using DFDev.Singleton;
 
-namespace YYDev.UI.Layer
+namespace DFDev.UI.Layer
 {
     public class LayerManager : MonoSingleton<LayerManager>
     {

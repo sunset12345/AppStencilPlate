@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace YYDev.UI.Layer
+namespace DFDev.UI.Layer
 {
     public abstract class LayerContent : MonoBehaviour
     {

@@ -4,7 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 
-namespace YYDev.CSVConfig.Editor
+namespace DFDev.CSVConfig.Editor
 {
     internal class TableRowData
     {
@@ -94,7 +94,7 @@ public partial class ").Append(className).Append(@"
 
             content.Append(@"
 
-public class ").Append($"{configClassName} : YYDev.CSVConfig.ConfigBase").Append(@"
+public class ").Append($"{configClassName} : DFDev.CSVConfig.ConfigBase").Append(@"
 {
     static string __config_file_name = ").Append("\"").Append(className).Append("\";");
             content.Append(@"

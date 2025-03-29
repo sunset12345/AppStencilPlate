@@ -2,7 +2,7 @@ using System;
 using System.Runtime.InteropServices;
 using UnityEngine;
 
-namespace YYDev.UserLabel
+namespace DFDev.UserLabel
 {
     [AttributeUsage(AttributeTargets.Method)]
     [ComVisible(true)]

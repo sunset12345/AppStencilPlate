@@ -1,6 +1,6 @@
 using System.Text.RegularExpressions;
 
-namespace YYDev.CSVConfig.Editor
+namespace DFDev.CSVConfig.Editor
 {
     internal static class TypeMatchRegex
     {

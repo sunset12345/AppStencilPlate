@@ -7,7 +7,7 @@ using System.Text;
 using System.Reflection;
 using System;
 
-namespace YYDev.CSVConfig.Editor
+namespace DFDev.CSVConfig.Editor
 {
     public class ExcelUtility
     {

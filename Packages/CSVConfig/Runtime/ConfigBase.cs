@@ -1,6 +1,6 @@
 using System;
 
-namespace YYDev.CSVConfig
+namespace DFDev.CSVConfig
 {
     public abstract class ConfigBase
     {

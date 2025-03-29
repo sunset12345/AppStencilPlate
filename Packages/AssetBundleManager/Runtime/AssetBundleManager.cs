@@ -2,10 +2,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
-using YYDev.Singleton;
+using DFDev.Singleton;
 using Xxtea;
 
-namespace YYDev.AssetBundles
+namespace DFDev.AssetBundles
 {
     public delegate void UpdateNeeded(uint totalSize);
 

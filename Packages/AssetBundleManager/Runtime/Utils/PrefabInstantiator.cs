@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace YYDev.AssetBundles
+namespace DFDev.AssetBundles
 {
     public class PrefabInstantiator : MonoBehaviour
     {

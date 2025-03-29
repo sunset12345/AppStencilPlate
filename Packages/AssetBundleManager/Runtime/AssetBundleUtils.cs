@@ -1,4 +1,4 @@
-namespace YYDev.AssetBundles
+namespace DFDev.AssetBundles
 {
     public static class AssetBundleUtils
     {

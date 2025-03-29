@@ -1,9 +1,9 @@
 {
-    "name": "YYDev.AssetBundles.Editor",
+    "name": "DFDev.AssetBundles.Editor",
     "rootNamespace": "",
     "references": [
         "LitJson",
-        "YYDev.AssetBundles"
+        "DFDev.AssetBundles"
     ],
     "includePlatforms": [
         "Editor"

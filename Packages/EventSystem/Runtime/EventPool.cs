@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
 
-namespace YYDev.EventSystem
+namespace DFDev.EventSystem
 {
     /// <summary>
     /// 事件池

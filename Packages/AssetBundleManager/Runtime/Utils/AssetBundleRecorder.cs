@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace YYDev.AssetBundles
+namespace DFDev.AssetBundles
 {
     public class AssetBundleRecorder
     {
