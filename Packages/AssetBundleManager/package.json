@@ -1,5 +1,5 @@
 {
-  "name": "com.DFDev.abmanager",
+  "name": "com.dfdev.abmanager",
   "version": "1.2.8",
   "displayName": "Asset Bundle Manager",
   "description": "Asset Bundle Manager including asset updating.",
@@ -14,8 +14,8 @@
     "Update"
   ],
   "dependencies": {
-    "com.DFDev.singleton": "1.0.0",
-    "com.DFDev.litjson": "1.0.0"
+    "com.dfdev.singleton": "1.0.0",
+    "com.dfdev.litjson": "1.0.0"
   },
   "hideInEditor": false
 }

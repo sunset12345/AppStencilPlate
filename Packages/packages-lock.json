@@ -212,6 +212,66 @@
         "com.unity.modules.imgui": "1.0.0"
       }
     },
+    "com.dfdev.abmanager": {
+      "version": "file:AssetBundleManager",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "com.dfdev.singleton": "1.0.0",
+        "com.dfdev.litjson": "1.0.0"
+      }
+    },
+    "com.dfdev.csvconfig": {
+      "version": "file:CSVConfig",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
+    "com.dfdev.eventsystem": {
+      "version": "file:EventSystem",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
+    "com.dfdev.json-config": {
+      "version": "file:JsonConfig",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
+    "com.dfdev.layermanager": {
+      "version": "file:Layermanager",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "com.unity.ugui": "1.0.0",
+        "com.dfdev.singleton": "1.0.0"
+      }
+    },
+    "com.dfdev.litjson": {
+      "version": "file:Litjson",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
+    "com.dfdev.singleton": {
+      "version": "file:Singleton",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
+    "com.dfdev.timemanager": {
+      "version": "file:TimeManager",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
+    "com.dfdev.userlabel": {
+      "version": "file:UserLabel",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
     "com.unity.modules.ai": {
       "version": "1.0.0",
       "depth": 1,
