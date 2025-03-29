@@ -1,0 +1,16 @@
+{
+    "name": "YYDev.UserLabel.Sample",
+    "rootNamespace": "",
+    "references": [
+        "YYDev.UserLabel"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

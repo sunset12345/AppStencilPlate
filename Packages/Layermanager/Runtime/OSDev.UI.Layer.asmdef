@@ -1,0 +1,16 @@
+{
+    "name": "YYDev.UI.Layer",
+    "rootNamespace": "",
+    "references": [
+        "YYDev.Singleton"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

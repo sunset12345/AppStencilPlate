@@ -1,0 +1,19 @@
+{
+    "name": "YYDev.AssetBundles.Editor",
+    "rootNamespace": "",
+    "references": [
+        "LitJson",
+        "YYDev.AssetBundles"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

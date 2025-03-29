@@ -1,0 +1,17 @@
+{
+    "name": "YYDev.AssetBundles",
+    "rootNamespace": "",
+    "references": [
+        "LitJson",
+        "YYDev.Singleton"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
