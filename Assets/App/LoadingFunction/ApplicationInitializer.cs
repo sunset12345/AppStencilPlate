@@ -1,8 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
+using App.UI.Main;
+using Cysharp.Threading.Tasks;
 using DFDev.AssetBundles;
 using DFDev.UI.Layer;
+using PushInformationFunction;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace App.LoadingFunction
 {
@@ -10,7 +12,6 @@ namespace App.LoadingFunction
     {
         [SerializeField] private string _assetBundleCode;
         [SerializeField] private string _enterSceneName;
-
 
         private void Start()
         {
@@ -31,7 +32,7 @@ namespace App.LoadingFunction
             LayerManager.Instance.CreateLayer(
                 (int)LayerTag.Loading,
                 new DefaultLayerController());
-            // PushManager.Instance.TriggerTokenRequest();
+            PushInformationManager.Instance.TriggerTokenRequest();
             LayerManager.Instance.AddLayerLoader((path, layer) =>
             {
                 path.ResolveAssetPath(out var bundle, out var asset);
@@ -57,11 +58,11 @@ namespace App.LoadingFunction
             // if (string.IsNullOrEmpty(userToken))
             //     UserDataManager.Instance.SetUserToken();
             // AudioManager.PlayMusic(AudioName.MainBGM);
-            // await SceneManager.LoadSceneAsync(_enterSceneName);
+            await SceneManager.LoadSceneAsync(_enterSceneName);
 
-            // MainLayer.Create();
+            MainLayer.Create();
             // GameLoginLayer.Create();
-            // LayerManager.Instance.GetLayerController((int)LayerTag.Loading)?.CloseAll();
+            LayerManager.Instance.GetLayerController((int)LayerTag.Loading)?.CloseAll();
         }
     }
 

@@ -28,7 +28,7 @@ namespace App.LoadingFunction
 
         private static IEnumerable<IEnumerator<float>> GetLoaders(LoadStepWatch watch)
         {
-            // Network.HttpManager.Instance.Setup(TimeSpan.FromSeconds(20f));
+            Network.HttpManager.Instance.Setup(TimeSpan.FromSeconds(20f));
             yield return InitSDKs(watch);
             yield return LoadPreloadAssetBundles(watch);
             yield return LoadConfig(watch);
