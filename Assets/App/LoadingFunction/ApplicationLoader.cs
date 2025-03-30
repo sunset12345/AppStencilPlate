@@ -12,8 +12,7 @@ using UnityEngine;
 
 namespace App.LoadingFunction
 {
-
-    public class ApplicationLoader : MonoBehaviour
+    public static class ApplicationLoader
     {
         public static void StartLoading(Action callback)
         {
