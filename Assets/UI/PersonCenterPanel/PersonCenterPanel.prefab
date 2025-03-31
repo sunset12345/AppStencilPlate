@@ -52,6 +52,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0168e8e6e02f04b609cbac14d999e0a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _avatarChangeBtn: {fileID: 1057452885211860415}
+  _nicknameChangeBtn: {fileID: 2311074567797135213}
+  _nicknameText: {fileID: 2554414735214004426}
+  _idText: {fileID: 503955373690949202}
+  _diamondText: {fileID: 9166178643011326245}
+  _storeBtn: {fileID: 977518425763524166}
+  _suggestionBtn: {fileID: 6088369693564922806}
+  _useArgeementBtn: {fileID: 3372248322999244072}
+  _privacyPolicyBtn: {fileID: 4178037957154976712}
+  _logoutBtn: {fileID: 6467182638676124587}
+  _deleteAccountBtn: {fileID: 1041379742967725896}
 --- !u!1 &835129218718035152
 GameObject:
   m_ObjectHideFlags: 0

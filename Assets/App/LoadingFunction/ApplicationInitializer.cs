@@ -60,7 +60,6 @@ namespace App.LoadingFunction
             //     UserDataManager.Instance.SetUserToken();
             // AudioManager.PlayMusic(AudioName.MainBGM);
             await SceneManager.LoadSceneAsync(_enterSceneName);
-            // MainLayer.Create();
             LoginLayer.Create();
             LayerManager.Instance.GetLayerController((int)LayerTag.Loading)?.CloseAll();
         }

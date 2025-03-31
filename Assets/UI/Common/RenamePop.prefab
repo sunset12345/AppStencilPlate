@@ -624,7 +624,7 @@ GameObject:
   - component: {fileID: 2822725783601249457}
   - component: {fileID: 5512819947556252780}
   - component: {fileID: 8051793903769327176}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: RenamePop
   m_TagString: Untagged
   m_Icon: {fileID: 0}

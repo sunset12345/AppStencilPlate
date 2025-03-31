@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7166703570209468129}
   - component: {fileID: 157852730628139406}
   - component: {fileID: 1558991802889006715}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Info
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -145,7 +145,7 @@ GameObject:
   - component: {fileID: 8202585638204359308}
   - component: {fileID: 2431028053653605049}
   - component: {fileID: 2559744078007816051}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: MessageBg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -222,7 +222,7 @@ GameObject:
   - component: {fileID: 5725628352586155081}
   - component: {fileID: 4967875952790494554}
   - component: {fileID: 853670184793253212}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: CommonMessageTip
   m_TagString: Untagged
   m_Icon: {fileID: 0}

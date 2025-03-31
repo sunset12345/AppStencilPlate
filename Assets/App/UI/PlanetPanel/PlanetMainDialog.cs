@@ -1,6 +1,7 @@
 using System;
 using App.Config;
 using App.LoadingFunction;
+using App.UI.AivanaPlanet;
 using DFDev.UI.Layer;
 using TMPro;
 using UnityEngine;
@@ -33,20 +34,23 @@ namespace App.UI.PlanetPanel
 
         private void OnClickGo()
         {
-            // switch (_planetId)
-            // {
-            //     case 1:
-            //         LoadingLayer.Create(LoadingType.Start);
-            //         break;
-            //     case 2:
-            //         LoadingLayer.Create(LoadingType.Planet2);
-            //         break;
-            //     case 3:
-            //         LoadingLayer.Create(LoadingType.Planet3);
-            //         break;
-            //     default:
-            //         throw new ArgumentOutOfRangeException();
-            // }
+            switch (_planetId)
+            {
+                case 1:
+                    AivanaPlanetDialog.Create();
+                    break;
+                case 2:
+                    AivanaPlanetDialog.Create();
+                    break;
+                case 3:
+                    AivanaPlanetDialog.Create();
+                    break;
+                case 4:
+                    AivanaPlanetDialog.Create();
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException();
+            }
         }
 
         private int _planetId;

@@ -9,10 +9,12 @@ namespace App.UI.Main
 {
     public class MainLayer : LayerContent
     {
+        public static MainLayer Instance => _instance;
+        private static MainLayer _instance;
         [SerializeField] private Transform navigatorRoot;
         [SerializeField] private Transform _panelRoot;
         [SerializeField] private MainPanelType _defaultPanel = MainPanelType.Planet;
-    
+
         private MainNavigateItem _currentNavigator;
         public MainNavigateItem CurrentNavigator => _currentNavigator;
         private EventSubscriber _eventSubscriber;
@@ -22,6 +24,7 @@ namespace App.UI.Main
         {
             _eventSubscriber = new EventSubscriber();
             _eventSubscriber.Subscribe<MainNavigatorItemSelectedEvent>(OnMainNavigatorSelected);
+            _instance = this;
         }
 
         void Start()
@@ -72,6 +75,8 @@ namespace App.UI.Main
 
         public static void Create()
         {
+            if (MainLayer.Instance != null)
+                return;
             LayerManager.Instance.LoadContent(
                 LayerTag.Main,
                 "ui/main/MainLayer");

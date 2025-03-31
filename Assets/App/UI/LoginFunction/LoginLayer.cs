@@ -8,6 +8,7 @@ using DFDev.DeviceID;
 using UnityEngine.UI;
 using Button = DFDev.UI.Button;
 using App.Config;
+using App.UI.Main;
 
 namespace App.UI.LoginFunction
 {
@@ -87,6 +88,7 @@ namespace App.UI.LoginFunction
                 DataCache.DataCache.Save(DataEnum.UserName.ToString(), _nickName.text);
                 DataCache.DataCache.Save(DataEnum.AvatarId.ToString(), _avatarId);
                 DataCache.DataCache.Save(DataEnum.UserToken.ToString(), DeviceIDTools.GetDeviceUUID());
+                MainLayer.Create();
                 Close();
             }
             else
@@ -98,6 +100,7 @@ namespace App.UI.LoginFunction
                 }
                 Close();
             }
+            MainLayer.Create();
         }
 
         private void OnClickNext()

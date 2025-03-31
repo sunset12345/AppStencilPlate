@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using App.Config;
 using App.Extends;
-using App.UI.LoginFunction;
+using App.IAP;
 using Cysharp.Threading.Tasks;
 using DFDev.AssetBundles;
 using DFDev.UI.Layer;
@@ -149,12 +149,12 @@ namespace App.LoadingFunction
             using (watch.NewStep(nameof(InitIAP)))
             {
                 var finished = false;
-                // IAPManager.Instance.InitCallback = (result, products, msg) => { finished = true; };
-                // IAPManager.Instance.PurchaseCallback = StoreManager.Instance.PurchaseCallBack;
+                IAPManager.Instance.InitCallback = (result, products, msg) => { finished = true; };
+                IAPManager.Instance.PurchaseCallback = StoreManager.Instance.PurchaseCallBack;
 
-                // //初始化iap 配置
-                // var configs = ConfigManager.Instance.GetConfig<InappConfigTable>();
-                // IAPManager.Instance.Init(configs.Rows);
+                //初始化iap 配置
+                var configs = ConfigManager.Instance.GetConfig<InappConfigTable>();
+                IAPManager.Instance.Init(configs.Rows);
 
                 const float timeOut = 2f;
                 var timer = 0f;

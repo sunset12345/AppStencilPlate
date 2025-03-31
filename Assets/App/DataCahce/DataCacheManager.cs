@@ -21,7 +21,16 @@ namespace App.DataCache
             this.DispatchEvent(Witness<DataCahceUpdateEvent>._, key);
         }
 
-        public void ClearData()
+        public void AddDiamond(int diamond)
+        {
+            var currentDiamond = DataCache.Load<int>(DataEnum.Diamond.ToString());
+            currentDiamond += diamond;
+            DataCache.Save(DataEnum.Diamond.ToString(), currentDiamond);
+            // 触发数据更新事件
+            this.DispatchEvent(Witness<DataCahceUpdateEvent>._, DataEnum.Diamond.ToString());
+        }
+
+        public void DeleteAccount()
         {
             PlayerPrefs.DeleteAll();
             // 触发数据清除事件

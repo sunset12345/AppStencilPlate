@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace App.UI.Common
 {
-    public class CommpnPop : PopupLayerContent
+    public class CommonPop : PopupLayerContent
     {
         [SerializeField] private TextMeshProUGUI _titleText;
         [SerializeField] private TextMeshProUGUI _contentText;
@@ -34,13 +34,13 @@ namespace App.UI.Common
             });
         }
 
-        public static CommpnPop Create(
+        public static CommonPop Create(
             string title,
             string content,
             System.Action onConfirm = null,
             System.Action onCancel = null)
         {
-            var popup = LayerManager.Instance.LoadContent(LayerTag.Popup, "ui/common/CommpnPop") as CommpnPop;
+            var popup = LayerManager.Instance.LoadContent(LayerTag.Popup, "ui/common/CommonPop") as CommonPop;
             popup.SetInfo(
                 title,
                 content,
