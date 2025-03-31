@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace YYDev.UI
+namespace DFDev.UI
 {
     public class ConversionGraphicGray : ConversionBase
     {

@@ -1,0 +1,6 @@
+#id,icon
+%id,icon_res
+$[id:unique][id:type:int],[icon_res:type:class@AssetRef]
+1,res/avatar/1
+2,res/avatar/2
+3,res/avatar/3

@@ -1,3 +1,4 @@
+using App.UI.LoginFunction;
 using App.UI.Main;
 using Cysharp.Threading.Tasks;
 using DFDev.AssetBundles;
@@ -59,9 +60,8 @@ namespace App.LoadingFunction
             //     UserDataManager.Instance.SetUserToken();
             // AudioManager.PlayMusic(AudioName.MainBGM);
             await SceneManager.LoadSceneAsync(_enterSceneName);
-
-            MainLayer.Create();
-            // GameLoginLayer.Create();
+            // MainLayer.Create();
+            LoginLayer.Create();
             LayerManager.Instance.GetLayerController((int)LayerTag.Loading)?.CloseAll();
         }
     }

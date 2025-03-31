@@ -1,0 +1,7 @@
+#id,name,desc,icon_res
+%id,name,desc,icon_res
+$[id:unique][id:type:int],[name:type:string],[desc:type:string],[icon_res:type:class@AssetRef]
+1,HealingPlanet,xxxx,res/planet/1
+2,AivanaPlanet,xxxxx,res/planet/2
+3,SnapPlanet,xxxxx,res/planet/3
+4,FunPlanet,xxxxx,res/planet/3

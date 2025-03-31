@@ -5,7 +5,7 @@ using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.Serialization;
 
-namespace YYDev.UI
+namespace DFDev.UI
 {
     [ExecuteAlways]
     [SelectionBase]

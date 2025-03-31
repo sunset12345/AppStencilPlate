@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using App.Config;
 using App.Extends;
+using App.UI.LoginFunction;
 using Cysharp.Threading.Tasks;
 using DFDev.AssetBundles;
 using DFDev.UI.Layer;
@@ -55,11 +56,8 @@ namespace App.LoadingFunction
             LayerManager.Instance.CreateUILayer(LayerTag.Main, new StackLayerController());
             LayerManager.Instance.CreateUILayer(LayerTag.Dialog, new StackLayerController());
             LayerManager.Instance.CreateUILayer(LayerTag.Popup, new StackLayerController());
-
             LayerManager.Instance.CreateUILayer(LayerTag.Tip, new DefaultLayerController());
-            LayerManager.Instance.CreateUILayer(LayerTag.GamePlay, new DefaultLayerController());
             LayerManager.Instance.CreateUILayer(LayerTag.Waiting, new DefaultLayerController());
-            LayerManager.Instance.CreateUILayer(LayerTag.Guide, new DefaultLayerController());
         }
 
         private static IEnumerator<float> LoadPreloadAssetBundles(LoadStepWatch watch)

@@ -1,7 +1,7 @@
 ﻿using System;
 using DG.Tweening;
 using UnityEngine;
-using YYDev.UI;
+using DFDev.UI;
 
 namespace OSDev.UI.TweenAni
 {

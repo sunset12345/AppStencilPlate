@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace YYDev.UI
+namespace DFDev.UI
 {
     [ExecuteAlways]
     public abstract class ConversionBase : MonoBehaviour
