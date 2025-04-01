@@ -37,7 +37,7 @@ namespace App.UI.PlanetPanel
             switch (_planetId)
             {
                 case 1:
-                    AivanaPlanetDialog.Create();
+                    HealingPlanet.Create();
                     break;
                 case 2:
                     AivanaPlanetDialog.Create();
