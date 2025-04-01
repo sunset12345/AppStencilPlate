@@ -7,8 +7,8 @@ using App.UI.Common;
 using DFDev.DeviceID;
 using UnityEngine.UI;
 using Button = DFDev.UI.Button;
-using App.Config;
 using App.UI.Main;
+using App.Config;
 
 namespace App.UI.LoginFunction
 {
@@ -28,13 +28,13 @@ namespace App.UI.LoginFunction
         [SerializeField] private Image _avatarImage;
         [SerializeField] private GameObject _part2;
         [SerializeField] private Button _avatarChooseButton;
-        private int _avatarId = 1;
+        [SerializeField] private Button _returnBtn;
 
-        private AvatarConfigTable _avatarConfigTable;
+        [SerializeField] private GameObject partMain;
+        private int _avatarId = 1;
 
         void Awake()
         {
-            _avatarConfigTable = ConfigManager.Instance.GetConfig<AvatarConfigTable>();
             var token = DataCache.DataCache.Load<string>(DataEnum.UserToken.ToString());
             bool hasToken = !string.IsNullOrEmpty(token);
             _login.gameObject.SetActive(hasToken);
@@ -44,6 +44,12 @@ namespace App.UI.LoginFunction
             _agree.isOn = false;
             _part1.SetActive(false);
             _part2.SetActive(false);
+            partMain.SetActive(true);
+            _returnBtn.AddClick(() =>
+            {
+                _part1.SetActive(true);
+                _part2.SetActive(false);
+            });
 
             _register.AddClick(() =>
             {
@@ -56,22 +62,25 @@ namespace App.UI.LoginFunction
                 _register.gameObject.SetActive(false);
                 _part1.SetActive(true);
                 _part2.SetActive(false);
+                partMain.SetActive(false);
             });
 
             _nextButton.AddClick(OnClickNext);
 
             _login.AddClick(OnClickFinish);
             _finishButton.AddClick(OnClickFinish);
-            _avatarImage.sprite = _avatarConfigTable.GetRowData(_avatarId).IconRes.Load<Sprite>();
+
+            PhotoManager.OnAvatarUpdated += OnAvatarUpdated;
             _avatarChooseButton.AddClick(() =>
             {
-                _avatarId = _avatarId + 1;
-                if (_avatarId > _avatarConfigTable.GetRowCount())
-                {
-                    _avatarId = 1;
-                }
-                _avatarImage.sprite = _avatarConfigTable.GetRowData(_avatarId).IconRes.Load<Sprite>();
+                PhotoManager.Instance.OnSelectAvatarButtonClick();
             });
+            _avatarImage.sprite = ConfigManager.Instance.GetConfig<Const>().DefaultIcon.Load<Sprite>();
+        }
+
+        private void OnAvatarUpdated(Texture2D d)
+        {
+            PhotoManager.Instance.SetTextureToImage(d, _avatarImage);
         }
 
         private void OnClickFinish()
@@ -148,6 +157,11 @@ namespace App.UI.LoginFunction
             {
                 return false;
             }
+        }
+
+        void OnDestroy()
+        {
+            PhotoManager.OnAvatarUpdated -= OnAvatarUpdated;
         }
 
         public static void Create()

@@ -55,10 +55,7 @@ namespace App.LoadingFunction
 
         private async void FinishLoading()
         {
-            // var userToken = UserDataManager.UserToken;
-            // if (string.IsNullOrEmpty(userToken))
-            //     UserDataManager.Instance.SetUserToken();
-            // AudioManager.PlayMusic(AudioName.MainBGM);
+            PhotoManager.Instance.InitManager();
             await SceneManager.LoadSceneAsync(_enterSceneName);
             LoginLayer.Create();
             LayerManager.Instance.GetLayerController((int)LayerTag.Loading)?.CloseAll();

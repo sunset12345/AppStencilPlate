@@ -13,6 +13,12 @@ using System.Text;
 public class Const : DFDev.CSVConfig.ConfigBase
 {
     /// <summary>
+    /// 默认头像
+    /// </summary>
+    public AssetRef DefaultIcon => __DefaultIcon;
+    private AssetRef __DefaultIcon;
+
+    /// <summary>
     /// 谷歌AI地址
     /// </summary>
     public string GooglaAiUrl => __GooglaAiUrl;
@@ -49,6 +55,10 @@ public class Const : DFDev.CSVConfig.ConfigBase
         }
         
         var raw = "";
+        if (rawData.TryGetValue("DefaultIcon", out raw))
+        {
+            __DefaultIcon = AssetRef.Parse(raw);
+        }
         if (rawData.TryGetValue("GooglaAiUrl", out raw))
         {
             __GooglaAiUrl = raw;

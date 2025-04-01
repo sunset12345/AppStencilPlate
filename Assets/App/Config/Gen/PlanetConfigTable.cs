@@ -18,14 +18,14 @@ public partial class PlanetConfig
         internal set{ __Id = value; }
         get{ return __Id; }
     }
-    private string __Name;
-    public string Name
+    private AssetRef __Name;
+    public AssetRef Name
     {
         internal set{ __Name = value; }
         get{ return __Name; }
     }
-    private string __Desc;
-    public string Desc
+    private AssetRef __Desc;
+    public AssetRef Desc
     {
         internal set{ __Desc = value; }
         get{ return __Desc; }
@@ -87,8 +87,8 @@ public class PlanetConfigTable : DFDev.CSVConfig.ConfigBase
             string strId = rowdata[counter++];
             if (!string.IsNullOrEmpty(strId))
                 tmp.Id = int.Parse(strId);
-            tmp.Name = rowdata[counter++];
-            tmp.Desc = rowdata[counter++];
+            tmp.Name = AssetRef.Parse(rowdata[counter++]);
+            tmp.Desc = AssetRef.Parse(rowdata[counter++]);
             tmp.IconRes = AssetRef.Parse(rowdata[counter++]);
             __rows.Add( tmp.Id, tmp );
         }

@@ -17,8 +17,8 @@ namespace App.UI.PlanetPanel
         [SerializeField] private Button _rightBtn;
         [SerializeField] private Button _goBtn;
         [SerializeField] private Image _planetImage;
-        [SerializeField] private TextMeshProUGUI _planetName;
-        [SerializeField] private TextMeshProUGUI _planetDesc;
+        [SerializeField] private Image _planetName;
+        [SerializeField] private Image _planetDesc;
 
         private PlanetConfig _planetConfig;
         private PlanetConfigTable _planetConfigTable;
@@ -37,7 +37,7 @@ namespace App.UI.PlanetPanel
             switch (_planetId)
             {
                 case 1:
-                    HealingPlanet.Create();
+                    HealingPlanet.HealingPlanet.Create();
                     break;
                 case 2:
                     AivanaPlanetDialog.Create();
@@ -81,8 +81,10 @@ namespace App.UI.PlanetPanel
         {
             _planetConfig = ConfigManager.Instance.GetConfig<PlanetConfigTable>().GetRowData(_planetId);
             _planetImage.sprite = _planetConfig.IconRes.Load<Sprite>();
-            _planetName.text = _planetConfig.Name;
-            _planetDesc.text = _planetConfig.Desc;
+            _planetName.sprite = _planetConfig.Name.Load<Sprite>();
+            _planetDesc.sprite = _planetConfig.Desc.Load<Sprite>();
+            _planetName.SetNativeSize();
+            _planetDesc.SetNativeSize();
         }
 
         public static void Create(int id)

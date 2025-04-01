@@ -32,11 +32,8 @@ namespace App.UI.PersonCenterPanel
         [SerializeField] private Button _deleteAccountBtn;
 
         private EventSubscriber _eventSubscriber;
-
-        private AvatarConfigTable _avatarConfigTable;
         void Awake()
         {
-            _avatarConfigTable = ConfigManager.Instance.GetConfig<AvatarConfigTable>();
             _eventSubscriber = new EventSubscriber();
             _eventSubscriber.Subscribe<DataCahceUpdateEvent>(OnDataCahceUpdateEvent);
             _eventSubscriber.Subscribe<DataCacheClearAllEvent>(OnDataCacheClearAllEvent);
@@ -85,11 +82,11 @@ namespace App.UI.PersonCenterPanel
 
         private void OnClickChangeAvatar()
         {
-            var avatarId = DataCache.DataCache.Load<int>(DataEnum.AvatarId.ToString());
-            avatarId++;
-            if (avatarId > _avatarConfigTable.GetRowCount())
-                avatarId = 1;
-            DataCache.DataCache.Save(DataEnum.AvatarId.ToString(), avatarId);
+            // var avatarId = DataCache.DataCache.Load<int>(DataEnum.AvatarId.ToString());
+            // avatarId++;
+            // if (avatarId > _avatarConfigTable.GetRowCount())
+            //     avatarId = 1;
+            // DataCache.DataCache.Save(DataEnum.AvatarId.ToString(), avatarId);
         }
 
         private void OnClickChangeNickname()

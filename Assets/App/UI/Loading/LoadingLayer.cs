@@ -32,8 +32,7 @@ namespace App.UI.Loading
 
         private void OnLoadingProgressUpdated(float progress)
         {
-            var positionX = progress * 460 - 230;
-            _progress.transform.localPosition = new Vector3(positionX, -124, 0);
+            _progress.transform.SetWidth(progress * 375f);
             _value.text = $"{progress:P2}";
         }
 

@@ -1,7 +1,7 @@
 #id,name,desc,icon_res
 %id,name,desc,icon_res
-$[id:unique][id:type:int],[name:type:string],[desc:type:string],[icon_res:type:class@AssetRef]
-1,HealingPlanet,xxxx,res/planet/1
-2,AivanaPlanet,xxxxx,res/planet/2
-3,SnapPlanet,xxxxx,res/planet/3
-4,FunPlanet,xxxxx,res/planet/3
+$[id:unique][id:type:int],[name:type:class@AssetRef],[desc:type:class@AssetRef],[icon_res:type:class@AssetRef]
+1,res/planets/PlanetName_1,res/planets/PlanetDes_1,res/planets/1
+2,res/planets/PlanetName_2,res/planets/PlanetDes_2,res/planets/2
+3,res/planets/PlanetName_3,res/planets/PlanetDes_3,res/planets/3
+4,res/planets/PlanetName_4,res/planets/PlanetDes_4,res/planets/4

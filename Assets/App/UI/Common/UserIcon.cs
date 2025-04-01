@@ -1,6 +1,4 @@
 using App.Config;
-using App.DataCache;
-using DFDev.EventSystem;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,8 +8,6 @@ namespace App.UI.Common
     {
         [SerializeField] private Image _icon;
 
-        private EventSubscriber _eventSubscriber;
-
         void Start()
         {
             SetInfo();
@@ -19,26 +15,26 @@ namespace App.UI.Common
 
         void Awake()
         {
-            _eventSubscriber = new EventSubscriber();
-            _eventSubscriber.Subscribe<DataCahceUpdateEvent>(OnDataCahceUpdateEvent);
+            PhotoManager.OnAvatarUpdated += OnAvatarUpdated;
         }
 
-        private void OnDataCahceUpdateEvent(DataCahceUpdateEvent @event)
+        private void OnAvatarUpdated(Texture2D d)
         {
-            if (@event.Key == DataEnum.AvatarId.ToString())
-                SetInfo();
+            PhotoManager.Instance.SetTextureToImage(d, _icon);
         }
 
         private void SetInfo()
         {
-            var avatarId = DataCache.DataCache.Load<int>(DataEnum.AvatarId.ToString());
-            _icon.sprite = ConfigManager.Instance.GetConfig<AvatarConfigTable>()
-                .GetRowData(avatarId).IconRes.Load<Sprite>();
+            var texture2D = PhotoManager.LoadSavedAvatar();
+            if (texture2D == null)
+                _icon.sprite = ConfigManager.Instance.GetConfig<Const>().DefaultIcon.Load<Sprite>();
+            else
+                PhotoManager.Instance.SetTextureToImage(texture2D, _icon);
         }
 
         void OnDestroy()
         {
-            _eventSubscriber.Dispose();
+            PhotoManager.OnAvatarUpdated -= OnAvatarUpdated;
         }
     }
 }
