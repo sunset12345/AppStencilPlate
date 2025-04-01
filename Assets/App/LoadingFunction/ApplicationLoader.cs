@@ -5,6 +5,7 @@ using System.Linq;
 using App.Config;
 using App.Extends;
 using App.IAP;
+using App.UI.Chat;
 using Cysharp.Threading.Tasks;
 using DFDev.AssetBundles;
 using DFDev.UI.Layer;
@@ -125,9 +126,9 @@ namespace App.LoadingFunction
         {
             using (watch.NewStep(nameof(LoadConfig)))
             {
-                // var task = MessageController.Instance.RestoreChatHistory();
-                // while (!task.GetAwaiter().IsCompleted)
-                //     yield return 0.3f;
+                var task = ChatManager.Instance.InitChatInfoList();
+                while (!task.GetAwaiter().IsCompleted)
+                    yield return 0.3f;
                 yield return 1f;
             }
         }

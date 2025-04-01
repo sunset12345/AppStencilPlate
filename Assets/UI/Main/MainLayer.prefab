@@ -623,7 +623,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5962081779808829737, guid: 693d01c575ec6426188059503025affc, type: 3}
       propertyPath: _panelPrefabPath
-      value: ui/personcenterpanel/PersonCenterPanel
+      value: ui/messagepanel/MessagePanel
       objectReference: {fileID: 0}
     - target: {fileID: 6681144883205395538, guid: 693d01c575ec6426188059503025affc, type: 3}
       propertyPath: m_Group

@@ -1,1 +1,2 @@
-DefaultHead,ui/common/DefaultIcon,class@AssetRef,默认头像
+GoogleAiKey,AIzaSyBLFBKSaXtosmLiZc6ZY2fUprTwAgnwnMI,string,谷歌AI密钥
+GooglaAiUrl,https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=,string,谷歌AI地址

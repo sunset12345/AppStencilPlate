@@ -1,10 +1,6 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using App.Config;
 using App.DataCache;
 using App.UI.Common;
-using App.UI.Loading;
 using App.UI.LoginFunction;
 using App.UI.Main;
 using App.UI.ShopFunction;

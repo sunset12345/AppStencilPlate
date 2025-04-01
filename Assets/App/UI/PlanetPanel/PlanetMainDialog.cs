@@ -89,7 +89,7 @@ namespace App.UI.PlanetPanel
         {
             var dialog = LayerManager.Instance.LoadContent(
                 LayerTag.Dialog,
-                "ui/planet/PlanetMainDialog"
+                "ui/planetpanel/PlanetMainDialog"
             ) as PlanetMainDialog;
             dialog.Init(id);
         }

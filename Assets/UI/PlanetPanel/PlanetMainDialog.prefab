@@ -775,7 +775,7 @@ MonoBehaviour:
   _leftBtn: {fileID: 2985035993352077896}
   _rightBtn: {fileID: 4397987024300257086}
   _goBtn: {fileID: 685589336032218041}
-  _planetImage: {fileID: 0}
+  _planetImage: {fileID: 3693907553142684165}
   _planetName: {fileID: 6352134847267522079}
   _planetDesc: {fileID: 3943992510756683019}
 --- !u!114 &8989883029836955780

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using App.LoadingFunction;
 using DFDev.UI.Layer;
 using DG.Tweening;

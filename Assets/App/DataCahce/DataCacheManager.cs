@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using DFDev.EventSystem;
 using DFDev.Singleton;
 using UnityEngine;
@@ -10,13 +11,13 @@ namespace App.DataCache
     /// <remarks>
     /// 该类用于管理应用程序中的数据缓存。它允许设置、获取和清除缓存数据。
     /// </remarks>
-    public class DataCacheManager : Singleton<DataCacheManager>,IEventSender
+    public class DataCacheManager : Singleton<DataCacheManager>, IEventSender
     {
         public EventDispatcher Dispatcher => EventDispatcher.Global;
 
         public void SetData(string key, object value)
         {
-           DataCache.Save(key, value);
+            DataCache.Save(key, value);
             // 触发数据更新事件
             this.DispatchEvent(Witness<DataCahceUpdateEvent>._, key);
         }
@@ -30,6 +31,30 @@ namespace App.DataCache
             this.DispatchEvent(Witness<DataCahceUpdateEvent>._, DataEnum.Diamond.ToString());
         }
 
+        public List<int> GetUnlockList()
+        {
+            var unlockList = DataCache.Load<List<int>>(DataEnum.AiUnlock.ToString(), new List<int>());
+            return unlockList;
+        }
+
+        public List<int> GetChatRoleList()
+        {
+            var unlockList = DataCache.Load<List<int>>(DataEnum.ChatRoleList.ToString(), new List<int>());
+            return unlockList;
+        }
+
+        public void AddChatRoleId(int roleId)
+        {
+            var unlockList = DataCache.Load<List<int>>(DataEnum.ChatRoleList.ToString(), new List<int>());
+            if (!unlockList.Contains(roleId))
+            {
+                unlockList.Add(roleId);
+                DataCache.Save(DataEnum.ChatRoleList.ToString(), unlockList);
+                // 触发数据更新事件
+                this.DispatchEvent(Witness<DataCahceUpdateEvent>._, DataEnum.ChatRoleList.ToString());
+            }
+        }
+
         public void DeleteAccount()
         {
             PlayerPrefs.DeleteAll();
@@ -38,9 +63,9 @@ namespace App.DataCache
         }
     }
 
-    public class DataCacheClearAllEvent : EventBase{ }
+    public class DataCacheClearAllEvent : EventBase { }
     public class DataCahceUpdateEvent : EventBase<string>
-    { 
+    {
         public string Key => Field1;
     }
 

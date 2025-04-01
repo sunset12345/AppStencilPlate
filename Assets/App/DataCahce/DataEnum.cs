@@ -15,5 +15,7 @@ namespace App.DataCache
         UserName,
         AvatarId,
         Diamond,
+        AiUnlock,
+        ChatRoleList,
     }
 }
