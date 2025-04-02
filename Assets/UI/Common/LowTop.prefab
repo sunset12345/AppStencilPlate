@@ -434,6 +434,9 @@ GameObject:
   - component: {fileID: 1080520307132600271}
   - component: {fileID: 3221480461802156478}
   - component: {fileID: 588227611912370520}
+  - component: {fileID: 6215584070925012580}
+  - component: {fileID: 6647668491650843950}
+  - component: {fileID: 6711657499749441149}
   m_Layer: 0
   m_Name: Image
   m_TagString: Untagged
@@ -484,7 +487,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 0
+  m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -500,3 +503,48 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &6215584070925012580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7294653891936196454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e73dc9a0d45ac5944846c7e34fda0470, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _interactable: 1
+  _targetTransform: {fileID: 1080520307132600271}
+  _onClick:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &6647668491650843950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7294653891936196454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86a765b3d7c54721a2ee28bb8d4246f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _button: {fileID: 6215584070925012580}
+  _scale: -0.1
+  _delay: 0.1
+--- !u!114 &6711657499749441149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7294653891936196454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b793b41fd4624116b389cee49f3315c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _entranceBtn: {fileID: 6215584070925012580}

@@ -1,4 +1,3 @@
-using UnityEngine;
 
 namespace App.DataCache
 {
@@ -17,5 +16,6 @@ namespace App.DataCache
         Diamond,
         AiUnlock,
         ChatRoleList,
+        TimeLine,
     }
 }

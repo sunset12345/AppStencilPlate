@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using DFDev.EventSystem;
 using DFDev.Singleton;
+using Spine;
 using UnityEngine;
 
 namespace App.DataCache
@@ -60,6 +61,31 @@ namespace App.DataCache
             PlayerPrefs.DeleteAll();
             // 触发数据清除事件
             this.DispatchEvent(Witness<DataCacheClearAllEvent>._);
+        }
+
+        public void SaveTimeLine(TimeLineData tiemLine)
+        {
+            var timeLineList = DataCache.Load<List<TimeLineData>>(DataEnum.TimeLine.ToString(), new List<TimeLineData>());
+            timeLineList.Add(tiemLine);
+
+            DataCache.Save(DataEnum.TimeLine.ToString(), timeLineList);
+        }
+    }
+
+    [SerializeField]
+    public class TimeLineData{
+        public string Name;
+        public string TimeInfo;
+        public string Description;
+        public TimeLineData(
+            string name,
+            string time,
+            string des
+        )
+        {
+            Name = name;
+            TimeInfo = time;
+            Description = des;
         }
     }
 
