@@ -1,0 +1,13 @@
+#键值,资源,简介,所属ai
+%id,asset,dec,ai_id
+$[id:unique][id:type:int],[asset:type:class@AssetRef],[dec:type:string],[ai_id:type:int]
+1,res/photos/1,xxxxx,1
+2,res/photos/2,fasfsa,2
+3,res/photos/3,fafdsafascxzsfas,10
+4,res/photos/4,rqwerwvv,3
+5,res/photos/5,xxcasdsafxxx,4
+6,res/photos/4,31321r,5
+7,res/photos/3,erewf23r,6
+8,res/photos/2,xxxx312412x,7
+9,res/photos/1,4123rff,8
+10,res/photos/3,fdsafdf21,9

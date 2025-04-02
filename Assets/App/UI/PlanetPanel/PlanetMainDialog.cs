@@ -43,7 +43,7 @@ namespace App.UI.PlanetPanel
                     AivanaPlanetDialog.Create();
                     break;
                 case 3:
-                    AivanaPlanetDialog.Create();
+                    SnapPlanet.SnapPlanet.Create();
                     break;
                 case 4:
                     AivanaPlanetDialog.Create();

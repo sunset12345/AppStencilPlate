@@ -15,6 +15,8 @@ namespace App.UI.Main
         [SerializeField] private Transform _panelRoot;
         [SerializeField] private MainPanelType _defaultPanel = MainPanelType.Planet;
 
+        [SerializeField]  private GameObject _messageBg;
+
         private MainNavigateItem _currentNavigator;
         public MainNavigateItem CurrentNavigator => _currentNavigator;
         private EventSubscriber _eventSubscriber;
@@ -65,6 +67,7 @@ namespace App.UI.Main
                 _panelCache[_currentNavigator] = panel;
             }
 
+            _messageBg.SetActive(panel != null && panel.name == "MessagePanel(Clone)");
             panel.SetActive(true);
         }
 

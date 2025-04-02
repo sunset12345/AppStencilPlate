@@ -33,7 +33,7 @@ namespace App.UI.HealingPlanet
         {
             LayerManager.Instance.LoadContent(
                 LayerTag.Dialog,
-                "ui/healingplanet/TimeLineLayer"
+                "ui/healingplanet/TimeLineDialog"
             );
         }
     }

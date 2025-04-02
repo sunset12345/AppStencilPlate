@@ -30,6 +30,12 @@ public class Const : DFDev.CSVConfig.ConfigBase
     public string GoogleAiKey => __GoogleAiKey;
     private string __GoogleAiKey;
 
+    /// <summary>
+    /// 解锁ai文本
+    /// </summary>
+    public string UnlockAiTitle => __UnlockAiTitle;
+    private string __UnlockAiTitle;
+
 
     public override void ParseConfigure( string text )
     {
@@ -66,6 +72,10 @@ public class Const : DFDev.CSVConfig.ConfigBase
         if (rawData.TryGetValue("GoogleAiKey", out raw))
         {
             __GoogleAiKey = raw;
+        }
+        if (rawData.TryGetValue("UnlockAiTitle", out raw))
+        {
+            __UnlockAiTitle = raw;
         }
     }
 }

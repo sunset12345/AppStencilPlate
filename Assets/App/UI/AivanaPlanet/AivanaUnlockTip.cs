@@ -1,4 +1,5 @@
 using System;
+using App.Config;
 using App.LoadingFunction;
 using DFDev.UI;
 using DFDev.UI.Layer;
@@ -27,9 +28,9 @@ private Action _unlockAction;
         public void SetInfo(AiConfig aiConfig, Action unlockAction)
         {
             _unlockAction = unlockAction;
-            // _unlockText.text = string.Format(
-            //     LanguageManager.Instance.GetString("AivanaUnlockTip"),
-            //     aiConfig.Name);
+            _unlockText.text = string.Format(
+                ConfigManager.Instance.GetConfig<Const>().UnlockAiTitle,
+                aiConfig.UnlockCost);
         }
 
         public static void Create(AiConfig aiConfig, Action unlockAction)
