@@ -110,8 +110,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -329.18286}
-  m_SizeDelta: {x: 750, y: -658.3657}
+  m_AnchoredPosition: {x: 0, y: -319.5}
+  m_SizeDelta: {x: 750, y: -639}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &273821697119581706
 CanvasRenderer:
@@ -134,7 +134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Content: {fileID: 3796307484613265547}
-  m_Horizontal: 1
+  m_Horizontal: 0
   m_Vertical: 1
   m_MovementType: 1
   m_Elasticity: 0.1
@@ -203,7 +203,7 @@ MonoBehaviour:
   m_Padding:
     m_Left: -16
     m_Right: 0
-    m_Top: 19
+    m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 1
   m_Spacing: 35.53
@@ -329,6 +329,7 @@ GameObject:
   - component: {fileID: 8367820760369528272}
   - component: {fileID: 5329643553178447576}
   - component: {fileID: 1127975221302914545}
+  - component: {fileID: 8693461599573644693}
   m_Layer: 5
   m_Name: ShopDialog
   m_TagString: Untagged
@@ -381,6 +382,36 @@ MonoBehaviour:
   _shopItemRoot: {fileID: 3796307484613265547}
   _shopItemPrefab: {fileID: 8286634816954948076, guid: 149b79fa2c775424ab8b362da83bc972, type: 3}
   _closeBtn: {fileID: 8186817326156658196}
+--- !u!114 &8693461599573644693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7203766576710941364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 58fe1b6b67af147cfa3d4fa8b0fbaaba, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1001 &4176773427664438941
 PrefabInstance:
   m_ObjectHideFlags: 0
