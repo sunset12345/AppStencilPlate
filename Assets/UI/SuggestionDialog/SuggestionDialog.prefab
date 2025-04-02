@@ -602,7 +602,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05f6798019c55410fa49a2941c269490, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _closeBtn1: {fileID: 5150531998130320963}
+  _closeBtn1: {fileID: 7653918990249551056}
   _closeBtn2: {fileID: 5150531998130320963}
 --- !u!114 &4030342401780512644
 MonoBehaviour:
@@ -721,7 +721,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 3679930185601472018}
   m_TextViewport: {fileID: 6006757737351679011}
   m_TextComponent: {fileID: 4413824904593054138}
   m_Placeholder: {fileID: 3954791926416916738}

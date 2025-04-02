@@ -56,6 +56,13 @@ namespace App.UI.Chat
             }
         }
 
+        public void AddNewInfo(int id)
+        {
+            if(_chatInfoList.ContainsKey(id))
+                return;
+            _chatInfoList.Add(id, new ReactiveCollection<ChatInfo>());
+        }
+
         public void ClearCache()
         {
             _isClearStage = true;

@@ -58,7 +58,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -175,7 +175,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -883,7 +883,7 @@ MonoBehaviour:
   _closeBtn: {fileID: 494198191808324143}
   _sendBtn: {fileID: 2500309824815815562}
   _inputField: {fileID: 7713201472926379712}
-  _roleIcon: {fileID: 2611950937988133839}
+  _roleIcon: {fileID: 5946822555059061718}
   _roleNameText: {fileID: 7708983129234154741}
   _selfChatItem: {fileID: 4155812858081630794, guid: ef8e8388ee75f4938a59842eee633bd8, type: 3}
   _otherChatItem: {fileID: 4942475357754238605, guid: 457c0a9c95c0a467abce951f6ddf00f2, type: 3}

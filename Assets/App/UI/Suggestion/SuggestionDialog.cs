@@ -23,7 +23,7 @@ namespace App.UI.Suggestion
 
         public static void Create()
         {
-            LayerManager.Instance.LoadContent(LayerTag.Popup, "ui/suggestion/SuggestionDialog");
+            LayerManager.Instance.LoadContent(LayerTag.Popup, "ui/suggestiondialog/SuggestionDialog");
         }
     }
 }

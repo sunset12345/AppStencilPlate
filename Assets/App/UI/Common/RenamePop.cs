@@ -34,7 +34,8 @@ namespace App.UI.Common
                 return;
             }
 
-            DataCache.DataCache.Save(DataEnum.UserName.ToString(), _inputField.text);
+            DataCacheManager.Instance.SetData(DataEnum.UserName.ToString(), _inputField.text);
+            Close();
         }
 
         public static void Create()

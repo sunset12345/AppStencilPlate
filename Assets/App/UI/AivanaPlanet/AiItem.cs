@@ -43,6 +43,7 @@ namespace App.UI.AivanaPlanet
                 var unlockList = DataCacheManager.Instance.GetUnlockList();
                 unlockList.Add(_aiConfig.Id);
                 DataCache.DataCache.Save(DataEnum.AiUnlock.ToString(), unlockList);
+                ChatManager.Instance.AddNewInfo(_aiConfig.Id);
                 UpdateButtonShow();
             });
         }

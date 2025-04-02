@@ -65,7 +65,6 @@ namespace App.UI.Chat
                    {
                        if (pair.Key == _aiConfig.Id)
                        {
-                           // 只处理当前AI的聊天记录
                            pair.Value.ObserveAdd()
                                .Subscribe(add => AddItem(add.Value))
                                .AddTo(this);
@@ -75,7 +74,7 @@ namespace App.UI.Chat
                                .AddTo(this);
                        }
                    }
-               });
+               }).AddTo(this);
             UpdateChatList();
         }
 

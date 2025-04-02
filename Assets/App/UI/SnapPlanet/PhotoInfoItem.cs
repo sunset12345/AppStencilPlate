@@ -1,3 +1,7 @@
+using System;
+using App.Config;
+using App.DataCache;
+using DFDev.EventSystem;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -17,9 +21,39 @@ namespace App.UI.SnapPlanet
         [SerializeField] private Button _likeButton;
         [SerializeField] private Button _downLoadBtn;
 
-        public void SetInfo(int photoId)
-        {
+        private PhotoConfig _photoConfig;
+        private AiConfig _aiconfig;
+        private EventSubscriber _eventSubscriber;
 
+        void Awake()
+        {
+            _likeButton.AddClick(OnClickLike);
+            _downLoadBtn.AddClick(OnClickDown);
+            _eventSubscriber = new EventSubscriber();
+        }
+
+        private void OnClickDown()
+        {
+            
+        }
+
+        private void OnClickLike()
+        {
+            
+        }
+
+        public void SetInfo(PhotoConfig _config)
+        {
+            _photoConfig = _config;
+            _aiconfig = ConfigManager.Instance.GetConfig<AiConfigTable>().GetRowData(_photoConfig.AiId);
+            _aiIcon.sprite = _aiconfig.IconRes.Load<Sprite>();
+            _name.text = _aiconfig.Name;
+            _photo.sprite = _photoConfig.Asset.Load<Sprite>();
+        }
+
+        void OnDestroy()
+        {
+            _eventSubscriber.Dispose();
         }
     }
 }

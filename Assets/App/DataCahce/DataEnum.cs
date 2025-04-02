@@ -17,5 +17,6 @@ namespace App.DataCache
         AiUnlock,
         ChatRoleList,
         TimeLine,
+        LikePhotos,
     }
 }
