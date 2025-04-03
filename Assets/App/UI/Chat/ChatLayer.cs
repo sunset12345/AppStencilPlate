@@ -1,6 +1,8 @@
+using System;
 using App.Config;
 using App.LoadingFunction;
 using App.UI.Common;
+using App.UI.SnapPlanet;
 using Cysharp.Threading.Tasks;
 using DFDev.UI.Layer;
 using TMPro;
@@ -16,6 +18,7 @@ namespace App.UI.Chat
         [SerializeField] private Transform _chatItemRoot;
         [SerializeField] private Button _closeBtn;
         [SerializeField] private Button _sendBtn;
+        [SerializeField] private Button _aiInfoBtn;
         [SerializeField] private InputField _inputField;
         [SerializeField] private Image _roleIcon;
         [SerializeField] private TextMeshProUGUI _roleNameText;
@@ -30,16 +33,12 @@ namespace App.UI.Chat
             _closeBtn.AddClick(Close);
             _sendBtn.AddClick(OnClickSend);
 
-            //             // 监听整个字典结构变化
-            //     ChatManager.Instance.ChatInfoList.ObserveAdd()
-            //         .Subscribe(addEvent => Debug.Log($"Key {addEvent.Key} added"))
-            //         .AddTo(this);
+            _aiInfoBtn.AddClick(OnClickAiInfo);
+        }
 
-            // reactiveChatInfo.ObserveRemove()
-            //     .Subscribe(removeEvent => Debug.Log($"Key {removeEvent.Key} removed"))
-            //     .AddTo(disposables);
-
-            // 监听具体某个列表的内容变化
+        private void OnClickAiInfo()
+        {
+            AiInfoDialog.Create(_aiConfig.Id, false);
         }
 
         private void OnClickSend()
@@ -113,6 +112,14 @@ namespace App.UI.Chat
         {
             var chatLayer = LayerManager.Instance.LoadContent(
                 LayerTag.Chat,
+                "ui/chat/ChatLayer") as ChatLayer;
+            chatLayer.SetInfo(roleId);
+        }
+
+        public static void CreateUp(int roleId)
+        {
+            var chatLayer = LayerManager.Instance.LoadContent(
+                LayerTag.ChatUp,
                 "ui/chat/ChatLayer") as ChatLayer;
             chatLayer.SetInfo(roleId);
         }

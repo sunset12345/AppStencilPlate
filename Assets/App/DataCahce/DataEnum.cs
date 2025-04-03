@@ -18,5 +18,6 @@ namespace App.DataCache
         ChatRoleList,
         TimeLine,
         LikePhotos,
+        FollowList,
     }
 }

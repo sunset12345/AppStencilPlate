@@ -481,6 +481,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _aiIcon: {fileID: 5556195328287187328}
+  _aiInfoBtn: {fileID: 5896359323529859420}
   _name: {fileID: 6301658936124074227}
   _photoInfo: {fileID: 2633466078534585271}
   _photo: {fileID: 2135044465150481045}
@@ -694,6 +695,8 @@ GameObject:
   - component: {fileID: 594335241814833394}
   - component: {fileID: 2102226279345589276}
   - component: {fileID: 6122806292376398188}
+  - component: {fileID: 5896359323529859420}
+  - component: {fileID: 3519753242573434305}
   m_Layer: 0
   m_Name: Mask
   m_TagString: Untagged
@@ -743,7 +746,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0.003921569}
-  m_RaycastTarget: 0
+  m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -772,6 +775,38 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ShowMaskGraphic: 1
+--- !u!114 &5896359323529859420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6107402230018811365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e73dc9a0d45ac5944846c7e34fda0470, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _interactable: 1
+  _targetTransform: {fileID: 8963453253808082651}
+  _onClick:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &3519753242573434305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6107402230018811365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86a765b3d7c54721a2ee28bb8d4246f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _button: {fileID: 5896359323529859420}
+  _scale: -0.1
+  _delay: 0.1
 --- !u!1 &6633928668450579397
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,18 +8,51 @@ using UnityEngine.UI;
 
 public class PhotoManager : MonoSingleton<PhotoManager>
 {
+    // 定义回调委托
+    public delegate void SaveCallback(string result);
+    public delegate void PickCallback(string base64Image);
+
+    // 注册原生方法
+#if UNITY_IOS && !UNITY_EDITOR
+    [DllImport("__Internal")]
+    private static extern void _NativeGallery_SaveImage(string filePath, SaveCallback callback);
+
+    [DllImport("__Internal")]
+    private static extern void _NativeGallery_PickImage(bool allowEditing, PickCallback callback);
+#endif
+
+    //---------------- 从相册选择图片 -----------------
+
+    // 按钮点击触发选择
+    public void OnSelectAvatarButtonClick()
+    {
+        PickImage(true, (base64Image) =>
+        {
+            if (!string.IsNullOrEmpty(base64Image))
+            {
+                OnImagePicked(base64Image);
+            }
+        });
+    }
+
+    private void PickImage(bool allowEditing, PickCallback callback)
+    {
+#if UNITY_IOS && !UNITY_EDITOR
+        _NativeGallery_PickImage(allowEditing, callback);
+#else
+        Debug.LogWarning("PickImage is only supported on iOS.");
+#endif
+    }
+
+    #region 从手机读取头像
     public static event Action<Texture2D> OnAvatarUpdated;
 
-    // 调用原生插件
-    [DllImport("__Internal")]
-    private static extern void PickImage(bool allowEditing);
-
     // 接收图片数据的回调方法
-    public void OnImagePicked(string base64Image)
+    private void OnImagePicked(string base64Image)
     {
         byte[] imageData = Convert.FromBase64String(base64Image);
         StartCoroutine(ProcessImage(imageData));
-    }public void InitManager(){}
+    }
 
     private IEnumerator ProcessImage(byte[] data)
     {
@@ -66,32 +99,7 @@ public class PhotoManager : MonoSingleton<PhotoManager>
         return result;
     }
 
-    // 加载本地保存的头像
-    public static Texture2D LoadSavedAvatar()
-    {
-        string path = Path.Combine(Application.persistentDataPath, "avatar.png");
-        if (File.Exists(path))
-        {
-            byte[] data = File.ReadAllBytes(path);
-            Texture2D tex = new Texture2D(2, 2);
-            tex.LoadImage(data);
-            return tex;
-        }
-        return null;
-    }
-
-    // 按钮点击触发选择
-    public void OnSelectAvatarButtonClick()
-    {
-#if UNITY_IOS && !UNITY_EDITOR
-        PickImage(true);
-#else
-        // 编辑器测试代码
-        StartCoroutine(TestLoadImage());
-#endif
-    }
-
-     public void SetTextureToImage(Texture2D texture, Image targetImage)
+    public void SetTextureToImage(Texture2D texture, Image targetImage)
     {
         // Step 1: 创建Sprite
         Sprite sprite = Sprite.Create(
@@ -108,12 +116,30 @@ public class PhotoManager : MonoSingleton<PhotoManager>
         targetImage.preserveAspect = true; // 保持宽高比
     }
 
-    // 编辑器测试用
-    private IEnumerator TestLoadImage()
+    // 加载本地保存的头像
+    public static Texture2D LoadSavedAvatar()
     {
-        string path = "file://" + Path.Combine(Application.streamingAssetsPath, "TestAvatar.jpg");
-        WWW www = new WWW(path);
-        yield return www;
-        ProcessImage(www.bytes);
+        string path = Path.Combine(Application.persistentDataPath, "avatar.png");
+        if (File.Exists(path))
+        {
+            byte[] data = File.ReadAllBytes(path);
+            Texture2D tex = new Texture2D(2, 2);
+            tex.LoadImage(data);
+            return tex;
+        }
+        return null;
+    }
+
+    #endregion
+
+
+    //---------------- 保存图片到相册 -----------------
+    public void SaveImage(string filePath, SaveCallback callback)
+    {
+#if UNITY_IOS && !UNITY_EDITOR
+        _NativeGallery_SaveImage(filePath, callback);
+#else
+        Debug.LogWarning("SaveImage is only supported on iOS.");
+#endif
     }
 }

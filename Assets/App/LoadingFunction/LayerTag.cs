@@ -8,6 +8,7 @@ namespace App.LoadingFunction
         public const int Dialog = 25;
         public const int Chat = 26;
         public const int Popup = 27;
+        public const int ChatUp = 28;
         public const int Tip = 30;
         public const int Loading = 35;
         public const int Waiting = 40;

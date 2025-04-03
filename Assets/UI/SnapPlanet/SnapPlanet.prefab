@@ -1228,6 +1228,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5218418207201587337, guid: 3d72f5c89c9414c399e138c68a91c05c, type: 3}
+      propertyPath: _onClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5218418207201587337, guid: 3d72f5c89c9414c399e138c68a91c05c, type: 3}
+      propertyPath: _onClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5218418207201587337, guid: 3d72f5c89c9414c399e138c68a91c05c, type: 3}
+      propertyPath: _onClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 7278877689379595921}
+    - target: {fileID: 5218418207201587337, guid: 3d72f5c89c9414c399e138c68a91c05c, type: 3}
+      propertyPath: _onClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5218418207201587337, guid: 3d72f5c89c9414c399e138c68a91c05c, type: 3}
+      propertyPath: _onClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Close
+      objectReference: {fileID: 0}
+    - target: {fileID: 5218418207201587337, guid: 3d72f5c89c9414c399e138c68a91c05c, type: 3}
+      propertyPath: _onClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DFDev.UI.Layer.LayerContent, DFDev.UI.Layer
+      objectReference: {fileID: 0}
+    - target: {fileID: 5218418207201587337, guid: 3d72f5c89c9414c399e138c68a91c05c, type: 3}
+      propertyPath: _onClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6161165231249815654, guid: 3d72f5c89c9414c399e138c68a91c05c, type: 3}
       propertyPath: m_Name
       value: LowTop

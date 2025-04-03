@@ -549,6 +549,8 @@ GameObject:
   - component: {fileID: 364736882707002468}
   - component: {fileID: 2611950937988133839}
   - component: {fileID: 8070433211718527952}
+  - component: {fileID: 4264795533870942408}
+  - component: {fileID: 6976403613424792187}
   m_Layer: 5
   m_Name: RoleIconMask
   m_TagString: Untagged
@@ -598,7 +600,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0.003921569}
-  m_RaycastTarget: 0
+  m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -627,6 +629,38 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ShowMaskGraphic: 1
+--- !u!114 &4264795533870942408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5561706525943269687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e73dc9a0d45ac5944846c7e34fda0470, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _interactable: 1
+  _targetTransform: {fileID: 7605718651993326911}
+  _onClick:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &6976403613424792187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5561706525943269687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86a765b3d7c54721a2ee28bb8d4246f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _button: {fileID: 4264795533870942408}
+  _scale: -0.1
+  _delay: 0.1
 --- !u!1 &6188793439640916635
 GameObject:
   m_ObjectHideFlags: 0
@@ -882,6 +916,7 @@ MonoBehaviour:
   _chatItemRoot: {fileID: 1886962807504746902}
   _closeBtn: {fileID: 494198191808324143}
   _sendBtn: {fileID: 2500309824815815562}
+  _aiInfoBtn: {fileID: 4264795533870942408}
   _inputField: {fileID: 7713201472926379712}
   _roleIcon: {fileID: 5946822555059061718}
   _roleNameText: {fileID: 7708983129234154741}

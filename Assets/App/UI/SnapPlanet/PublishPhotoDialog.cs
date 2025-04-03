@@ -36,7 +36,7 @@ namespace App.UI.SnapPlanet
         {
             LayerManager.Instance.LoadContent(
                 LayerTag.Dialog,
-                "ui/snapplanet/SnapPlanet"
+                "ui/snapplanet/PublishPhotoDialog"
             );
         }
     }
