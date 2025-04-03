@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.IO;
 using DFDev.EventSystem;
 using DFDev.Singleton;
 using Spine;
@@ -109,6 +110,36 @@ namespace App.DataCache
                 likePhotos.Remove(photoId);
             SetData(DataEnum.LikePhotos.ToString(), likePhotos);
         }
+
+#region Vidoe
+
+        public void ChangeVidoeLikeStage(int videoId)
+        {
+            var likeVideos = DataCache.Load<List<int>>(DataEnum.LikeVideos.ToString(), new List<int>());
+            if (!likeVideos.Contains(videoId))
+                likeVideos.Add(videoId);
+            else
+                likeVideos.Remove(videoId);
+            SetData(DataEnum.LikePhotos.ToString(), likeVideos);
+        }
+
+        public bool VidoeIsLike(int videoId)
+        {
+            var likeVideos = DataCache.Load<List<int>>(DataEnum.LikeVideos.ToString(), new List<int>());
+            return likeVideos.Contains(videoId);
+        }
+
+        public string GetCacheDir()
+        {
+            var cacheDir = Path.Combine(Application.persistentDataPath, "CachedVideos");
+            if (!Directory.Exists(cacheDir))
+            {
+                Directory.CreateDirectory(cacheDir);
+            }
+            return cacheDir;
+        }
+
+#endregion
     }
 
     [SerializeField]

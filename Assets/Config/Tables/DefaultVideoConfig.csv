@@ -1,0 +1,13 @@
+#键值,资源,ai_id,description
+%id,asset,ai_id,description
+$[id:unique][id:type:int],[asset:type:string],[ai_id:type:int],[description:type:string]
+1,1,1,21312
+2,2,2,dqq
+3,3,3,ewqrqw
+4,4,4,ewq
+5,5,5,fewwqf
+6,6,6,wfeqwf
+7,7,7,ewfqw
+8,7,8,fwee
+9,7,9,fdsd
+10,7,10,dffds

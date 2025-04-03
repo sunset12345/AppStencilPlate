@@ -1,5 +1,4 @@
 using App.UI.LoginFunction;
-using App.UI.Main;
 using Cysharp.Threading.Tasks;
 using DFDev.AssetBundles;
 using DFDev.UI.Layer;
